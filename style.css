@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.grid{
+display: grid;
+grid-template-columns: 95px 1fr 1fr;
+grid-template-rows: 20px 20px 26px auto 20px;
+
+grid-template-areas: 
+"title   title   title"
+"header  header  header"
+"radsect radsect radsect"
+"content content content"
+"footer  footer  footer";
+}
+
+.title{
+font-weight: bolder;
+grid-area: title;
+text-align: center;
+}
+
+.header{
+    grid-area: header;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.input{
+    color: black;
+}
+
+.content{
+    grid-area: content;
+    
+    background-color: rgba(222, 231, 222, 0.055);    
+    padding-left: 15px;
+}
+
+.ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.li{
+    list-style-type: none;
+}
+
+.radsect{
+    
+    grid-area: radsect; 
+    padding-top: 2px;
+    text-align: center;
+    color: black;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    
+    background-color: transparent;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+    color:transparent;
+    text-align: center;
+    cursor: alias;
+}
+.footer:hover{ 
+    font-style: italic;
+    background-color:  black;
+    color: white;
+}
+
+@media screen and (min-width: 810px)
+{  
+    
+    .grid{
+
+    display: grid;
+    grid-template-columns: 5px 145px 1fr 1fr 1fr 1fr 5px;
+    grid-template-rows: 10px 40px 40px auto 15px;
+
+    grid-template-areas: 
+    ". .       .       .       .       .       ."
+    ". title   title   title   title   title   ."
+    ". header  header  header  header  header  ."
+    ". radsect content content content content ."
+    ". footer  footer  footer  footer  footer  ."
+    }
+
+    .title{
+        grid-area: title;
+        font-weight: bolder;
+        font-size: 40px;
+        text-align: center;
+        line-height: 40px;
+        }
+        
+        .header{
+
+            grid-area: header;
+            line-height: 40px;           
+        }
+
+        .radsect{
+            padding-left: 2px;
+            text-align: left;
+        }
+        
+        .content{
+            padding-left: 0px;
+        }
+}
