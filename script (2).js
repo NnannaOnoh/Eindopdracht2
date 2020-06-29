@@ -109,6 +109,7 @@ const addEventListeners = () => {
   });
 };
 
+document.getElementsByName("radiobutton")[0].checked = true;
 Zfield.value="Enter to search"
 addMoviesToDom(movies);
 addEventListeners();
